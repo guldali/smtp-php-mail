@@ -8,10 +8,10 @@ $konu = $_POST["konu"];
 $mesaj = $_POST["mesaj"];
 
 //VERİTABANI için bilgiler
-$servername = "localhost";
-$username = "sunuyoru_deneme";
-$password = "Guldali123+";
-$dbname = "sunuyoru_guldali";
+$servername = "";
+$username = "";
+$password = "+";
+$dbname = "";
 // bağlantı oluşturuldu
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 // bağlantı kontrol edildi
@@ -35,11 +35,11 @@ $mail->SMTPAuth = true;
 $mail->Host = 'smtp.gmail.com.';
 $mail->SMTPSecure = 'ssl';
 $mail->Port = 465;
-$mail->Username = 'guldaliozsoy07@gmail.com';
-$mail->Password = 'bilgisayar123+*';
+$mail->Username = '@gmail.com';
+$mail->Password = '';
 $mail->SetFrom($eposta, $ad);
 $mail->CharSet = 'UTF-8';
-$mail->AddAddress("guldaliozsoy07@gmail.com", "Bilal Uçar"); // SMTP username , Name Surname
+$mail->AddAddress("", ""); // SMTP username , Name Surname
 $mail->Subject = $konu;
 $content = $mesaj;
 $mail->MsgHTML($content);
